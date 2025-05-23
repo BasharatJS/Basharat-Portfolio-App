@@ -1,0 +1,223 @@
+.skills {
+  background: var(--skills-bg);
+  color: var(--text-primary);
+  margin-top: -2px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Animated Gradient Title Styles */
+.gradient-title {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 4s ease infinite;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glowing effect on hover */
+.gradient-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 4s ease infinite;
+  border-radius: 10px;
+  filter: blur(20px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-title:hover::before {
+  opacity: 0.3;
+}
+
+/* Dark theme adjustments */
+.dark-theme .gradient-title {
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+.dark-theme .gradient-title:hover::before {
+  opacity: 0.4;
+}
+
+/* Light theme - better contrast */
+.light-theme .gradient-title {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #8e2de2,
+    #4a00e0,
+    #667eea,
+    #764ba2
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .gradient-title::before {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #8e2de2,
+    #4a00e0,
+    #667eea,
+    #764ba2
+  );
+  background-size: 400% 400%;
+}
+
+/* Force all 4 skill categories in one row */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-category {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px var(--shadow);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--shadow);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px var(--shadow);
+}
+
+.skill-category h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.skills-list {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Tablet view - 2 columns */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .skill-category {
+    min-height: 200px;
+  }
+}
+
+/* Mobile view - 1 column */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gradient-title::before {
+    filter: blur(15px);
+  }
+}
+
+/* Large desktop - ensure proper spacing */
+@media (min-width: 1400px) {
+  .skills-grid {
+    max-width: 1400px;
+    gap: 2rem;
+  }
+
+  .skill-category {
+    padding: 2.5rem 2rem;
+  }
+}

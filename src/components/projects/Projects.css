@@ -1,0 +1,293 @@
+.projects {
+  background: var(--projects-bg);
+  color: var(--text-primary);
+  margin-top: -2px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Animated Gradient Title Styles */
+.gradient-title {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 4s ease infinite;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glowing effect on hover */
+.gradient-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #f5576c,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 4s ease infinite;
+  border-radius: 10px;
+  filter: blur(20px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-title:hover::before {
+  opacity: 0.3;
+}
+
+/* Dark theme adjustments */
+.dark-theme .gradient-title {
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+.dark-theme .gradient-title:hover::before {
+  opacity: 0.4;
+}
+
+/* Light theme - better contrast */
+.light-theme .gradient-title {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #8e2de2,
+    #4a00e0,
+    #667eea,
+    #764ba2
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .gradient-title::before {
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #8e2de2,
+    #4a00e0,
+    #667eea,
+    #764ba2
+  );
+  background-size: 400% 400%;
+}
+
+/* Force all 3 projects in one row */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--shadow);
+  height: fit-content;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: 0 25px 50px var(--shadow);
+  transform: translateY(-10px);
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-header h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.project-category {
+  display: inline-block;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.technologies {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.project-points {
+  margin-top: auto;
+  flex-grow: 1;
+}
+
+.project-point {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding-left: 0.5rem;
+}
+
+.project-point:last-child {
+  margin-bottom: 0;
+}
+
+/* Large desktop - more space */
+@media (min-width: 1400px) {
+  .projects-grid {
+    max-width: 1600px;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    padding: 2.5rem;
+  }
+}
+
+/* Tablet view - 2 columns, with one project below */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  .project-card {
+    min-height: 450px;
+  }
+
+  /* Make the third card span both columns for better layout */
+  .project-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile view - 1 column */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .project-card:nth-child(3) {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .project-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gradient-title::before {
+    filter: blur(15px);
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1.2rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
