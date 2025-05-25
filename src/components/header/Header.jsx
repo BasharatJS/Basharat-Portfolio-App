@@ -12,7 +12,7 @@ const Header = () => {
     })
   }
 
-  const navItems = ['about', 'skills', 'experience', 'projects']
+  const navItems = ['home', 'about', 'skills', 'experience', 'projects']
 
   return (
     <motion.header

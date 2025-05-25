@@ -8,7 +8,7 @@ import profilePhoto from '../../assets/images/Photo.jpg'
 
 const Hero = () => {
   return (
-    <section className="section hero">
+    <section className="section hero" id="home">
       <AnimatedBackground variant="hero" />
       <FloatingShapes />
       <div className="container">
