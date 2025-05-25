@@ -72,7 +72,7 @@ const Skills = () => {
             scale: 1.05,
             transition: { duration: 0.3 },
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           Skills & Technologies
         </motion.h2>
@@ -85,7 +85,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index, duration: 0.6 }}
               whileHover={{ scale: 1.05, y: -10 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <h3>{category.title}</h3>
               <div className="skills-list">
@@ -96,7 +96,7 @@ const Skills = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.1 * skillIndex, duration: 0.3 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   >
                     {skill}
                   </motion.span>

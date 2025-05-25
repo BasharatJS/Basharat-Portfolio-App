@@ -48,7 +48,7 @@ const Experience = () => {
             scale: 1.05,
             transition: { duration: 0.3 },
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           Work Experience
         </motion.h2>
@@ -61,14 +61,14 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 * index, duration: 0.8 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <motion.div
                 className="experience-header"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 * index + 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <h3>{exp.title}</h3>
                 <h4>{exp.company}</h4>
@@ -87,7 +87,7 @@ const Experience = () => {
                       delay: 0.3 * index + 0.4 + 0.1 * pointIndex,
                       duration: 0.5,
                     }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   >
                     • {point}
                   </motion.p>

@@ -17,14 +17,16 @@ const Hero = () => {
           <motion.div
             className="hero-content"
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
+            viewport={{ once: false }}
           >
             <motion.div
               className="greeting"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               <span className="wave">👋</span>
               <span>Hello, I'm</span>
@@ -32,8 +34,9 @@ const Hero = () => {
 
             <motion.h1
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               MD BASHARAT TAQUEE
             </motion.h1>
@@ -41,8 +44,9 @@ const Hero = () => {
             <motion.h2
               className="role-title"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               React Native & MERN Stack Developer
             </motion.h2>
@@ -50,8 +54,9 @@ const Hero = () => {
             <motion.p
               className="hero-description"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               I'm a passionate full-stack developer from Pune, India,
               specializing in React Native mobile applications and modern web
@@ -63,8 +68,9 @@ const Hero = () => {
             <motion.div
               className="hero-stats"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               <div className="stat-item">
                 <span className="stat-number">3+</span>
@@ -83,8 +89,9 @@ const Hero = () => {
             <motion.div
               className="hero-buttons"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               <motion.button
                 className="btn primary"
@@ -111,8 +118,9 @@ const Hero = () => {
             <motion.div
               className="social-links"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 0.8 }}
+              viewport={{ once: false }}
             >
               <motion.a
                 href="https://github.com/BasharatJS"
@@ -170,8 +178,9 @@ const Hero = () => {
           <motion.div
             className="hero-image"
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
+            viewport={{ once: false }}
           >
             <motion.div
               className="image-container"

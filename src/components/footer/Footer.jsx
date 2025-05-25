@@ -89,13 +89,13 @@ const Footer = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <motion.h3
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Let's Connect
             </motion.h3>
@@ -119,7 +119,7 @@ const Footer = () => {
                     rotate: 2,
                   }}
                   whileTap={{ scale: 0.95 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
                   <motion.span
                     className="contact-icon"
@@ -141,13 +141,13 @@ const Footer = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <motion.h3
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Quick Links
             </motion.h3>
@@ -167,7 +167,7 @@ const Footer = () => {
                     color: '#667eea',
                   }}
                   whileTap={{ scale: 0.95 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
                   {link.name}
                 </motion.button>
@@ -181,14 +181,14 @@ const Footer = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <motion.h3
               className="form-title"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Send Me a Message
             </motion.h3>
@@ -199,7 +199,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="form-row">
                 <motion.div
@@ -207,7 +207,7 @@ const Footer = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
                   <input
                     type="text"
@@ -225,7 +225,7 @@ const Footer = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 >
                   <input
                     type="email"
@@ -244,7 +244,7 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.6, duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <textarea
                   name="message"
@@ -266,7 +266,7 @@ const Footer = () => {
                 transition={{ delay: 1.8, duration: 0.6 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 {isSubmitting ? (
                   <span className="loading-text">
@@ -297,7 +297,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <motion.div
             className="education-card"
@@ -317,14 +317,14 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <motion.div
             className="footer-divider"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ delay: 1.7, duration: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           />
 
           <div className="footer-bottom-content">
@@ -333,7 +333,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 2, duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               &copy; 2025 MD Basharat Taquee. All rights reserved.
             </motion.p>
@@ -355,7 +355,7 @@ const Footer = () => {
                 backgroundColor: '#667eea',
               }}
               whileTap={{ scale: 0.9 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               ⬆️
             </motion.button>
@@ -366,7 +366,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.4, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             Made with ❤️ using React & Framer Motion
           </motion.p>

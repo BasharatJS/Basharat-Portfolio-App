@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import './About.css'
 import AnimatedBackground from '../animated-bg/AnimatedBackground'
 import FloatingShapes from '../floating/FloatingShaps'
 
 const About = () => {
+  // const aboutRef = useRef(null)
+  // const isInView = useInView(heroRef, { once: false, amount: 0.3 })
+
   return (
     <section id="about" className="section about">
       <AnimatedBackground variant="about" />
@@ -14,7 +17,7 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <motion.h2
             className="section-title gradient-title"
@@ -30,7 +33,7 @@ const About = () => {
               scale: 1.05,
               transition: { duration: 0.3 },
             }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             About Me
           </motion.h2>
@@ -39,7 +42,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <p className="about-text">
               Experienced in JavaScript, React Native mobile app development for

@@ -77,7 +77,7 @@ const Projects = () => {
             scale: 1.05,
             transition: { duration: 0.3 },
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           Featured Projects
         </motion.h2>
@@ -94,14 +94,14 @@ const Projects = () => {
                 rotateY: 2,
                 boxShadow: '0 25px 50px var(--shadow)',
               }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <motion.div
                 className="project-header"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * index + 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <h3>{project.title}</h3>
                 <span className="project-category">{project.category}</span>
@@ -113,7 +113,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * index + 0.4, duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 {project.technologies.map((tech, techIndex) => (
                   <motion.span
@@ -125,7 +125,7 @@ const Projects = () => {
                       delay: 0.2 * index + 0.6 + 0.1 * techIndex,
                       duration: 0.3,
                     }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   >
                     {tech}
                   </motion.span>
@@ -143,7 +143,7 @@ const Projects = () => {
                       delay: 0.2 * index + 0.8 + 0.1 * pointIndex,
                       duration: 0.5,
                     }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                   >
                     • {point}
                   </motion.p>
